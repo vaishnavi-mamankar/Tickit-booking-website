@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		form {
+			background-color: #ffffff;
+			border: 2px solid #cccccc;
+			padding: 20px;
+			width: 400px;
+			margin: auto;
+			margin-top: 50px;
+			border-radius: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"], input[type="reset"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-right: 10px;
+			margin-top: 20px;
+			float: right;
+		}
+
+		input[type="submit"]:hover, input[type="reset"]:hover {
+			background-color: #45a049;
+		}
+
+		input[type="submit"]:focus, input[type="reset"]:focus {
+			outline: none;
+		}
+
+		.error-message {
+			color: red;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+
+		.success-message {
+			color: green;
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	</style>
+    <script>
+		function showconfirm() {
+			if (confirm("Ticket booked successfully!")) {
+				// Redirect to a new page or perform other actions
+                <p> Tickit booked successfully</p>
+			}
+		}
+	</script>    
+</head>
+<body>
+	<form id="xyz">
+		<h1>Book Tickit</h1>
+		<label for="registration-id">Registration ID*</label>
+		<input type="text" id="registration-id" name="registration-id" placeholder="Enter your registration ID" required>
+
+		<label for="username">Username*</label>
+		<input type="text" id="username" name="username" pattern="[A-Za-z]+" placeholder="Enter your username" required>
+
+		<label for="password">Password*</label>
+		<input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.*\s).{8,}" placeholder="Enter your password" required>
+
+		<label for="email">Email*</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+		<label for="mobile-number">Mobile Number*</label>
+		<input type="tel" id="mobile-number" name="mobile-number" pattern="^(?!0{10})\d{10}$" placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+
+		<label for="dob">Date of Birth*</label>
+		<input type="date" id="dob" name="dob" pattern="^(0?[1-9]|[12][0-9]|3[01])(0?[1-9]|1[0-2])[0-9]{4}$" placeholder="Enter your date of birth" required>
+
+        <input type="submit" value="Submit" onsubmit="showconfirmation()">
+		<input type="reset" value="Cancel">
+	</form>
+</body>
+</html>
