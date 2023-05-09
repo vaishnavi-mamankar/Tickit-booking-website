@@ -75,11 +75,12 @@
 	</style>
     <script>
 		function showconfirm() {
-			if (confirm("Ticket booked successfully!")) {
-				// Redirect to a new page or perform other actions
-                <p> Tickit booked successfully</p>
+		 alert("Tickit Booked Successfully");
 			}
-		}
+			function cancel(){
+				alert("Booking Canceled");
+  			}
+
 	</script>    
 </head>
 <body>
@@ -103,8 +104,8 @@
 		<label for="dob">Date of Birth*</label>
 		<input type="date" id="dob" name="dob" pattern="^(0?[1-9]|[12][0-9]|3[01])(0?[1-9]|1[0-2])[0-9]{4}$" placeholder="Enter your date of birth" required>
 
-        <input type="submit" value="Submit" onsubmit="showconfirmation()">
-		<input type="reset" value="Cancel">
+        <input type="submit"  value="Submit" onclick="showconfirm()">
+		<input type="reset" value ="Cancel" onclick="cancel()">
 	</form>
 </body>
 </html>

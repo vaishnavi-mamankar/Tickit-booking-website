@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.8">
+    <link rel="stylesheet" href="style1.css">
+    <title>Movie Tickit Booking</title>        
+</head>   
+<body>
+    <nav class="fnav">
+        <div class="left">
+            <input type= "text" id="movie-title" placeholder= "Search by title...">
+            <button>Search</button>
+        </div>
+
+        <div class="right">
+            <p>Movie Tickit Booking</p>
+            <button><a href="index.html" style="color: white;">Back</a></button>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <nav class="sec-nav">
+        <div class="s-left">
+            <p><a href="#demo" >Movies</a></p>
+            <p><a href="book.html">Book Tickit</a></p>
+        </div>
+
+        <div class="s-right">
+            <p><a href = "booking.html">Seat Available and Time Left</a></p>
+        </div>
+    </nav>
+
+    <div class="main">
+        <img src="images/theater.jpg" alt="" id="image">
+    </div>
+
+    <div class="container">
+        <h2 id = "demo">Movies Bollywood</h2>
+        <div class="card">
+            <img src="images/avengers.jpg" alt="">
+            <img src="images/spiderman.jpg" alt="">
+            <img src="images/Suicide-Squad.jpg" alt="">
+            <img src="images/villian.jpg" alt="">
+            <img src="images/zero.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="premiere">
+        <div class="container">
+            <h2>Movies Hollywood</h2>
+            <div class="card">
+                <img src="images/avengers.jpg" alt="">
+                <img src="images/villian.jpg" alt="">
+                <img src="images/Suicide-Squad.jpg" alt="">
+                <img src="images/spiderman.jpg" alt="">
+                <img src="images/zero.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+        <div class="footer">
+            <img src="logo.png" alt="">
+
+            <div class="icon">
+                <button><a href="index.html">Back</a></button>
+            </div>
+        </div>
+<script>
+const images = [
+  "images/theater.jpg","images/avengers.jpg","images/villian.jpg","images/zero.jpg"];
+
+let i = 0;
+
+function changeImage() {
+  i = (i + 1) % images.length;
+  document.getElementById("image").src = images[i];
+  setTimeout(changeImage, 2000);
+}
+setTimeout(changeImage, 2000);
+
+</script>    
+
+          
+</body>     

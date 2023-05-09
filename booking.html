@@ -1,43 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie Seat Booking</title>
+    <link rel="stylesheet" href="style3.css">
   </head>
   <body>
+    
+    <div>
+      <img class="main-logo" src="images/theater.jpg"/>
+    </div>
+
+     
+    <div class="movie-container">
+      <label style="font-size: 1em;">Select movie:</label>
+      <select id="movie">
+        <option value="100">Avengers (100 Rs)</option>
+        <option value="120">Spiderman(120 Rs)</option>
+        <option value="150">Suicide-Squad (150)</option>
+        <option value="150">Villian (150)</option>
+        <option value="150">Zero (150)</option>
+      </select>
+    </div>
+
+    <ul class="showcase" id="demo1">
+      <li>
+        <div id="seat" class="seat"></div>
+        <small class="status" style="font-size: 1em;">Selected</small>
+      </li>
+      <li>
+        <div id="seat" class="seat selected"></div>
+        <small class="status" style="font-size: 1em;">Available Seat</small>
+      </li>
+      <li>
+        <div id="seat" class="seat occupied"></div>
+        <small class="status" style="font-size: 1em;">Booked Seat</small>
+      </li>
+    </ul>
+
     <div class="container">
-      <h1>Book Tickit</h1>
-      <div class="booking">
-        <h2>Select a Movie</h2>
-       
-        <select>
-          <option value="">Select a movie</option>
-          <option value="movie1">Baghi</option>
-          <option value="movie2">Race 2</option>
-          <option value="movie3">Dear Zindagi</option>
-          <option value="movie3">Terminator 2</option>
-          <option value="movie3">Ice Age 3</option>
-        </select>
-       
-        <h2>Book Seat</h2>
-        <div class="seats">
-          <div class="seat-available">1</div>
-          <div class="seat-available">2</div>
-          <div class="seat-booked">3</div>
-          <div class="seat-available">4</div>
-          <div class="seat-available">5</div>
-          <div class="seat-available">6</div>
-          <div class="seat-available">7</div>
-          <div class="seat-available">8</div>
-          <div class="seat-available">9</div>
-          <div class="seat-available">10</div>
-        </div>
-        
-        <form action="book.html">
-            <input type="submit" style="background-color: yellow; color: black; font-size: 14px; padding: 15px; border-radius:30px;" value="Book Here">
-        </form>
-        </div>
+      <div class="screen"></div>
+
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+      </div>
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+      </div>
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat occupied"></div>
+      </div>
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+      </div>
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+      </div>
+      <div class="row">
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat occupied"></div>
+        <div id="seat" class="seat"></div>
       </div>
     </div>
+
+    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px">
+      You have selected <span id="count">0</span> seats for a price of Rs.<span
+        id="total"
+        >0</span
+      >
+    </p>
+    <nav>
+    <a href="./index.html">
+      <button class="btn-home" style="background-color: yellow;justify-content:space-around;">Home</button>
+    </a>
+    <a href="book.html">
+      <button class="btn-home" style="background-color: yellow;justify-content:space-around;">Book Tickit</button>
+    </a>
+    <br>
+    <button class="btn" onclick="countdown()" style="background-color: aquamarine;justify-content:space-around;border-radius:20px;margin-top:10px">Timer Left for Next Show</button>
+    <p id = "timer"></p>
+  </nav>
+    
+    
+
+    <script>
+     
+      var count=0;
+      var seats=document.getElementsByClassName("seat");
+      for(var i=0;i<seats.length;i++){
+        var item=seats[i];
+        
+        item.addEventListener("click",(event)=>{
+          var price= document.getElementById("movie").value;
+
+          if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
+          count++;
+          
+          var total=count*price;
+          event.target.classList.add("selected");
+          document.getElementById("count").innerText=count;
+          document.getElementById("total").innerText=total;
+
+          }
+        })
+      }
+      function countdown(){
+        var countDownDate = new Date().getTime() + 10000; // 10 seconds from now
+
+  var x = setInterval(function() {
+    
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var hours = Math.floor(distance / (1000 * 60 *60));
+    var minutes = Math.floor((distance % (1000 * 60 *60))/(1000*60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = hours + "h" +":"+ minutes + "m" +":"+ seconds + "s";
+    document.getElementById("timer1").innerHTML = hours + "h" +":"+ minutes + "m" +":"+ seconds + "s";
+    document.getElementById("timer2").innerHTML = hours + "h" +":"+ minutes + "m" +":"+ seconds + "s";
+    document.getElementById("timer3").innerHTML = hours + "h" +":"+ minutes + "m" +":"+ seconds + "s";
+    document.getElementById("timer4").innerHTML = hours + "h" +":"+ minutes + "m" +":"+ seconds + "s";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "expired";
+    }
+  }, 1000);
+      }
+      countdown()
+    </script>
   </body>
 </html>

@@ -1,0 +1,203 @@
+*{
+    margin: 0%;
+    padding: 0%;    
+    font-family: 'Mulish', sans-serif;
+}
+
+.card1 {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+    overflow: hidden;
+    width: 300px;
+}
+.card1 img {
+    width: auto;
+    height: 250px;
+}
+.card1 h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 20px;
+    text-align: center;
+}
+.card1 p {
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}
+.card1 .showtimes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+.card1 .showtimes button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+.card1 .showtimes button:hover {
+    background-color: #666;
+}
+
+.fnav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 11px;
+    color: white;
+    padding: 6px;
+    background-color: rgb(42,42,68);
+}
+
+.fnav .left{
+    display: flex;   
+    margin-top: 10px;
+}
+
+.left img{
+    width:22%;
+}
+
+.left input{
+    margin-inline: 11px;
+    width: 420px;
+    height: 33px;
+    border: none;
+    outline:none;
+    text-align: center;
+    margin-top: 16px;
+    border-radius: 2px;
+}
+
+.fnav .right{
+    display: flex;  
+    margin-top: 15px; 
+}
+
+.right p{
+    margin-inline: 22px;
+    font-size: 22px;
+
+}
+
+.right button{
+    margin-inline: 22px;
+    width: 80px;
+    height: 27px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(224,69,98);
+    color: white;
+}
+
+.right i{
+    margin-inline: 22px;
+    font-size: 22px;
+}
+.sec-nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 9px;
+    background-color: lightgrey;
+    color: black;
+}
+
+.sec-nav .s-left{
+    display: flex;
+}
+
+.sec-nav .s-right{
+    display: flex;
+}
+
+.sec-nav p:hover{
+    color: rgb(245,70,99);
+    cursor: pointer;
+    font-weight: 600;
+}
+.sec-nav a:hover{
+    color: rgb(245,70,99);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.s-left p{
+    margin-inline-start: 18px;
+}
+
+.s-right p{
+    margin-inline-start: 22px;
+}
+
+.main img{
+    width: 100%;
+}
+
+.container h2{
+    text-align: center;
+    padding: 22px;
+}
+
+.container .card{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.card img{
+    width: 17%;
+    margin-block: 18px;
+    border-radius: 5px;
+}
+
+.premiere{
+    background-color: rgb(51, 51, 74);
+    color: white;
+    padding: 33px;
+    margin-top: 44px;
+}
+
+.container .card{
+    margin-top: 11px;
+}
+
+.footer{
+    background-color: rgb(227,218,218);
+    padding: 33px;
+    margin-top: 44px;
+}
+
+.footer img{
+    width: 22%;
+    margin-left: 39%;
+    border-top: 2px solid grey;
+
+}
+
+.footer .icon{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon i{
+    margin-inline: 22px;
+    font-size: 25px;
+    font-size: 36px;
+}
+.footer .icon button{
+    background-color: purple;
+    color:black;
+    border-radius:20px;
+    width:70px;
+    height:30px;
+}
